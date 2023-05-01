@@ -1,0 +1,15 @@
+server:
+  port: 3000
+spring:
+  application:
+    name: demo-service
+  main:
+    allow-circular-references: true
+  profiles:
+    active:
+    - native
+management:
+    endpoints:
+      web:
+        exposure:
+          include: health, info
