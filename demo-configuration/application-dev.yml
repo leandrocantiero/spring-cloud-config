@@ -1,0 +1,22 @@
+server:
+  port: 3000
+spring:
+  application:
+    name: demo-service
+  main:
+    allow-circular-references: true
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leandrocantiero/spring-cloud-config
+          #username: leandrocantiero
+          #password: Audir10tdi@
+          default-label: main
+          search-paths:
+          - 'demo-configuration*'
+management:
+    endpoints:
+      web:
+        exposure:
+          include: health, info
